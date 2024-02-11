@@ -1,9 +1,10 @@
 import React from "react";
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import { Dropdown, DropdownButton, Form } from "react-bootstrap";
+import '../../styles/FilterOptions.css'
 
 const FilterOptions = ({ setFilter }) => {
   return (
-    <div>
+    <div className="filter_option">
       <DropdownButton id="dropdown-basic-button" title="Filter by Priority">
         <Dropdown.Item onClick={() => setFilter("all")}>All</Dropdown.Item>
         <Dropdown.Item onClick={() => setFilter("low")}>Low</Dropdown.Item>

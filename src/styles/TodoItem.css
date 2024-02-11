@@ -1,0 +1,25 @@
+.todo_item{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: -1px 0px 4px -2px black
+}
+.completed-text {
+    text-decoration: line-through;
+  }
+.todo_item .edit_input{
+   border: 0;
+}
+.todo_item .edit_input:focus-visible{
+  outline: none;
+}
+.save_icon{
+    color: #2564CF;
+    cursor: pointer;
+}
+.edit_checkbox{
+    border-radius: 50%;
+}

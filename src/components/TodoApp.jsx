@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AddTodoForm from './AddTodoForm';
+import { Container } from 'react-bootstrap';
 
 const TodoApp = () => {
     const [tasks, setTasks] = useState(() => {
@@ -33,12 +34,12 @@ const TodoApp = () => {
         );
       };
     return (
-        <div>
+        <Container fluid>
         <AddTodoForm addTask={addTask}  tasks={tasks}
           deleteTask={deleteTask}
           toggleTaskCompletion={toggleTaskCompletion}
           editTask={editTask}/>
-          </div>
+          </Container>
     );
 };
 

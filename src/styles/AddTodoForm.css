@@ -1,0 +1,45 @@
+.sidebar{
+    background-color: white;
+    height: 100vh;
+    padding-top: 30px;
+}
+.priority{
+    display: block;
+    width: 100%;
+    margin-top: 15%;
+}
+.priority p{
+    color: black;
+    cursor: pointer;
+    padding: 12px 24px 12px 24px;
+    font-weight: 600;
+}
+
+.priority .active {
+    background-color: #EFF6FC;
+    position: relative;
+    border-left: 3px solid #2564CF !important;
+
+  }
+ .add_to_form_right{
+   padding: 20px;
+ }
+
+ .task-input-area{
+display: flex;
+ }
+ .task-input-area .form-control{
+    width: 90%;
+    position: relative;
+ }
+ 
+ .task-input-area .btn{
+    color: #2564CF;
+    background-color: #FDFDFD;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    width: 10%;
+    font-weight: 600;
+    position: absolute;
+    right: 20px;
+ }
+ 
