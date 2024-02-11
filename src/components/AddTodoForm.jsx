@@ -46,8 +46,10 @@ const AddTodoForm = ({
   return (
     <>
       <Row>
-        <Col xs={2} className="sidebar">
-          <RxHamburgerMenu
+        <Col lg={2}  className="d-lg-block d-none ">
+        <div className="sidebar ">
+        <RxHamburgerMenu
+          className=" d-lg-block d-md-none"
             style={{ fontSize: "25px", marginLeft: "24px" }}
             onClick={() => setShowPriorityMenu(true)}
           />
@@ -82,12 +84,18 @@ const AddTodoForm = ({
               </div>
             </Offcanvas.Body>
           </Offcanvas>
+        </div>
         </Col>
-        <Col xs={10} className="add_to_form_right">
-          <Form onSubmit={handleSubmit} className="form_section">
+        <Col lg={10} md={12} >
+         <div className="add_to_form_right ">
+         <Form onSubmit={handleSubmit} className="form_section">
             <Form.Group controlId="taskNameInput">
               <div className="d-flex justify-content-between flex-wrap align-items-center mb-3">
-                <Form.Label className="fw-bold text-capitalize">
+              <RxHamburgerMenu className=" d-lg-none d-md-block"
+            style={{ fontSize: "25px", marginLeft: "24px" }}
+            onClick={() => setShowPriorityMenu(true)}
+          />
+                <Form.Label className="fw-bold text-capitalize mb-0">
                   {priority}
                 </Form.Label>
                 <div className='d-flex align-items-center'>
@@ -113,6 +121,7 @@ const AddTodoForm = ({
             toggleTaskCompletion={toggleTaskCompletion}
             editTask={editTask}
           />
+         </div>
         </Col>
       </Row>
     </>

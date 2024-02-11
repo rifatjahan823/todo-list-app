@@ -1,5 +1,5 @@
 import React from "react";
-import { Dropdown, DropdownButton, Form } from "react-bootstrap";
+import { Dropdown, DropdownButton} from "react-bootstrap";
 import '../../styles/FilterOptions.css'
 
 const FilterOptions = ({ setFilter }) => {

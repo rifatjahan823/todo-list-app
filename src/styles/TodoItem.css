@@ -1,6 +1,8 @@
 .todo_item{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: top;
     background: white;
     padding: 10px;
     margin: 10px 0;
@@ -16,10 +18,22 @@
 .todo_item .edit_input:focus-visible{
   outline: none;
 }
-.save_icon{
+.save_icon, .edit_icon, .delete_icon{
+    font-size: 25px;
     color: #2564CF;
     cursor: pointer;
 }
-.edit_checkbox{
+.delete_icon{
+    color: red;
+    margin-left: 5px;
+}
+.todo_item .form-check-input[type=checkbox] {
+    border: 1.5px solid #2564CF;
     border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.todo_item .form-check-input:focus{
+    box-shadow: none;
 }

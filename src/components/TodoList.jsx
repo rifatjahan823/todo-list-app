@@ -1,26 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ComoletedItem from './ComoletedItem';
 import TodoItem from './TodoItem';
 
 
 const TodoList = ({ tasks, deleteTask, toggleTaskCompletion, editTask }) => {
-    const [filter, setFilter] = useState('all');
+  const sortedTasks = tasks.sort((a, b) => a.priority.localeCompare(b.priority));
 
-  
-    const filteredTasks = tasks?.filter(task => {
-      if (filter === 'all') return true;
-      return task.priority === filter;
-    });
-  
-    // Sort tasks so that completed tasks come last
-    const sortedTasks = [...filteredTasks].sort((a, b) => {
-      if (a.completed && !b.completed) return 1;
-      if (!a.completed && b.completed) return -1;
-      return 0;
-    });
-    return (
+  const completedTasks = sortedTasks.filter(task => task.completed);
+  const notCompletedTasks=sortedTasks.filter(task => !task.completed)
 
-        <div className="todo-list">
-        {sortedTasks.map((task) => (
+  return (
+    <div className="todo-list">
+         <div className="todo-list">
+        {notCompletedTasks.map((task) => (
           <TodoItem
             key={task.id}
             task={task}
@@ -30,7 +22,16 @@ const TodoList = ({ tasks, deleteTask, toggleTaskCompletion, editTask }) => {
           />
         ))}
       </div>
-    );
+      {completedTasks.length > 0 && (
+        <ComoletedItem
+          completedTasks={completedTasks}
+          deleteTask={deleteTask}
+          toggleTaskCompletion={toggleTaskCompletion}
+          editTask={editTask}
+        />
+      )}
+    </div>
+  );
 };
 
 export default TodoList;

@@ -1,0 +1,9 @@
+.completed_task .accordion-button:focus {
+    z-index: 3;
+    border-color: var(--bs-accordion-btn-focus-border-color);
+    outline: 0;
+    box-shadow:none;
+}
+.completed_task .accordion-button:not(.collapsed) {
+    background-color: white;
+}
