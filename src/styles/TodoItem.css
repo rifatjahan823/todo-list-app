@@ -37,3 +37,14 @@
 .todo_item .form-check-input:focus{
     box-shadow: none;
 }
+.priority-low {
+    color: black;
+  }
+  
+  .priority-medium {
+    color: orange;
+  }
+  
+  .priority-high {
+    color: green;
+  }
